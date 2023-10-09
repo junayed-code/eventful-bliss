@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Event Planning",
+    "image": "/images/event-planning.jpg",
+    "price": 2500,
+    "description": "Comprehensive event planning services to bring your social gatherings to life.",
+    "details": "Our event planning service is designed to transform your social gatherings into unforgettable experiences. With years of expertise in event coordination, we offer a comprehensive package that covers every aspect of event planning. From concept development to execution, our team works closely with you to ensure your vision comes to life. We begin by understanding your goals, theme, and preferences, allowing us to tailor the event to your exact specifications. Venue selection is a crucial part of the process, and we'll assist you in finding the perfect location that aligns with your event's theme and budget. Our attention to detail extends to decor, where we create a visually stunning ambiance that captivates your guests. Vendor coordination is seamless as we collaborate with trusted partners to provide catering, entertainment, and more. On the day of your event, our on-site management ensures everything runs smoothly, allowing you to relax and enjoy the celebration."
+  },
+  {
+    "id": 2,
+    "name": "Venue Selection and Decor",
+    "image": "/images/event-venue.jpg",
+    "price": 1500,
+    "description": "Expert venue selection and decor services to create a perfect ambiance for your events.",
+    "details": "Our venue selection and decor services are crafted to make your social events truly exceptional. We understand that the right venue and decor can set the tone for your gathering, and our team is dedicated to ensuring your event's success. Our experts excel at venue selection, taking into account your event's size, style, and budget. We present you with a range of options that match your vision, allowing you to choose the perfect backdrop for your celebration. Once the venue is selected, our decor specialists step in to transform it into a breathtaking setting that reflects your theme and style. We offer a wide array of decor options, from elegant and classic to modern and vibrant, ensuring that every detail is meticulously planned. With our venue selection and decor services, your event space will leave a lasting impression on your guests, creating the perfect ambiance for a memorable experience."
+  },
+  {
+    "id": 3,
+    "name": "Catering and Food Services",
+    "image": "/images/event-food-service.jpg",
+    "price": 2000,
+    "description": "Delicious catering and food services to satisfy the taste buds of your guests.",
+    "details": "Our catering and food services are designed to tantalize the taste buds of your guests and elevate your social events. We take pride in offering a diverse culinary experience that caters to a variety of palates and preferences. Whether you're planning an intimate gathering or a grand celebration, our catering team creates a customized menu that suits your event's theme and dietary requirements. Our chefs use the finest ingredients to craft delectable dishes that leave a lasting impression. From appetizers that tease the senses to sumptuous main courses and mouthwatering desserts, every aspect of your dining experience is carefully curated. We understand the importance of presentation, and our food is as visually appealing as it is delicious. Our service staff ensures seamless food service, leaving you and your guests to savor every moment. With our catering and food services, you can be confident that your event's culinary delights will be a highlight, creating fond memories for all."
+  },
+  {
+    "id": 4,
+    "name": "Entertainment and Music",
+    "image": "/images/event-entertainment.jpg",
+    "price": 1800,
+    "description": "Exciting entertainment and music options to keep your guests entertained all night.",
+    "details": "Elevate your social events with our exciting entertainment and music options that promise a night of non-stop fun and enjoyment. Our entertainment services are designed to keep your guests engaged and entertained from the moment they arrive until the event's conclusion. Whether you're hosting a dance party, a themed celebration, or a special occasion, our diverse entertainment offerings cater to all tastes. Choose from live bands that play your favorite tunes, DJs who set the perfect mood, and talented performers who captivate audiences. We work closely with you to understand your musical preferences and tailor the playlist to your liking. Our entertainers are professionals who know how to read the crowd and keep the energy high. With our entertainment and music services, your event will be a vibrant and memorable experience for all your guests, leaving them with lasting impressions and cherished memories."
+  },
+  {
+    "id": 5,
+    "name": "Photography and Videography",
+    "image": "/images/event-photography.jpg",
+    "price": 2200,
+    "description": "Professional photography and videography services to capture precious moments.",
+    "details": "Capture the precious moments of your social events with our professional photography and videography services. We understand that every event is unique, and our team is dedicated to preserving the memories that matter most to you. Our experienced photographers and videographers use state-of-the-art equipment to ensure every detail is beautifully captured. From candid shots that capture genuine emotions to meticulously arranged group photos, we create a visual narrative that tells the story of your event. We're adept at capturing the essence of your event, from the excitement of the dance floor to the heartfelt moments during toasts and speeches. Our videographers produce high-quality videos that allow you to relive the magic of your event for years to come. With our photography and videography services, you can trust us to capture the essence of your social gatherings, creating cherished memories that you'll treasure forever."
+  },
+  {
+    "id": 6,
+    "name": "Invitations and Stationery",
+    "image": "/images/event-invitations.jpg",
+    "price": 800,
+    "description": "Custom invitations and stationery design to set the tone for your social events.",
+    "details": "Make a lasting impression with custom invitations and stationery that set the perfect tone for your social events. Our talented designers collaborate with you to create unique and personalized invitations that reflect the style and theme of your gathering. Whether you're planning a formal affair or a casual celebration, we craft invitations that leave a memorable first impression on your guests. From elegant and sophisticated designs to playful and creative concepts, we offer a range of options to suit your preferences. Our attention to detail extends to every piece of stationery, from save-the-date cards to event programs and place cards. With our invitations and stationery services, you'll ensure that your event starts on the right note, leaving guests excited and anticipating a memorable experience."
+  },
+  {
+    "id": 7,
+    "name": "Guest Registration and Check-In",
+    "image": "/images/guest-registration.jpg",
+    "price": 1000,
+    "description": "Efficient guest registration and check-in services to streamline event entry.",
+    "details": "Streamline the entry process for your social events with our efficient guest registration and check-in services. We understand the importance of a smooth and hassle-free arrival experience for your guests. Our system is designed to minimize wait times and ensure that your event starts on time. We provide user-friendly online registration solutions that allow attendees to RSVP and provide necessary information in advance. On the day of your event, our check-in process is efficient and well-organized, with trained staff assisting guests as they arrive. We use the latest technology to verify registrations and issue event credentials promptly. Our goal is to create a positive first impression and set the tone for a seamless and enjoyable event experience. With our guest registration and check-in services, you'll ensure that your social gatherings start off on the right foot, leaving guests excited and ready to enjoy the festivities."
+  },
+  {
+    "id": 8,
+    "name": "Event Decor Rentals",
+    "image": "/images/event-decor-rentals.jpg",
+    "price": 1200,
+    "description": "Rent exquisite event decor items to add a touch of elegance to your gatherings.",
+    "details": "Enhance the ambiance of your social events with our exquisite event decor rentals. We offer a wide selection of decor items that cater to various themes and styles, allowing you to create the perfect atmosphere for your gatherings. From elegant centerpieces and lighting options to stylish furnishings and decorative accents, our rental collection includes everything you need to transform your venue. Our decor items are carefully curated to ensure quality and aesthetics, giving your event a touch of elegance and sophistication. Whether you're hosting a formal dinner, a themed party, or a casual get-together, our decor rentals allow you to express your creativity and style. With our event decor rentals, you'll have access to a diverse range of options that elevate the overall look and feel of your social gatherings, leaving your guests in awe."
+  },
+  {
+    "id": 9,
+    "name": "Event Security and Safety",
+    "image": "/images/event-security.jpg",
+    "price": 1500,
+    "description": "Professional event security and safety measures to ensure a secure environment.",
+    "details": "Your safety and the safety of your guests are paramount. That's why we offer professional event security and safety measures to create a secure environment for your social gatherings. Our security personnel are trained and experienced in event security protocols, ensuring that every aspect of safety is covered. From crowd control and access management to emergency response planning, we take a proactive approach to prevent and mitigate potential risks. We work closely with you to understand the specific security needs of your event and tailor our services accordingly. Whether you're hosting an intimate gathering or a large-scale celebration, our team is equipped to provide the level of security required to give you peace of mind. With our event security and safety services, you can relax and enjoy your event, knowing that we're dedicated to creating a secure and worry-free environment for all."
+  },
+  {
+    "id": 10,
+    "name": "Themed Parties and Decor",
+    "image": "/images/event-themed-parties.jpg",
+    "price": 1700,
+    "description": "Create themed parties with unique decor to make your events unforgettable.",
+    "details": "Transform your social events into themed extravaganzas with our creative decor and planning services. We specialize in bringing your unique vision to life, creating memorable and unforgettable gatherings. Our themed party packages are designed to take your event to the next level. Whether you have a specific theme in mind or need inspiration, our team will work closely with you to conceptualize and execute a thematic wonderland. From decor and lighting to entertainment and activities, we ensure that every element aligns with your chosen theme. Your guests will be immersed in an immersive experience, where every detail contributes to the overall ambiance. With our themed parties and decor services, you'll create social events that stand out, leaving a lasting impression on your guests and making memories that will be cherished for years to come."
+  }
+]
