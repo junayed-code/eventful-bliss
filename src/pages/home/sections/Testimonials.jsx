@@ -4,15 +4,10 @@ import Container from "../../../components/Container";
 import Section from "../../../components/Section";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import useFetch from "../../../hooks/useFetch";
 
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState([]);
-
-  useEffect(() => {
-    fetch("/__data/testimonials.json")
-      .then(res => res.json())
-      .then(data => setTestimonials(data));
-  }, []);
+  const testimonials = useFetch("/__data/testimonials.json");
 
   return (
     <Section className="py-12 md:py-20 bg-secondary/5">
@@ -27,7 +22,10 @@ export default function Testimonials() {
             showArrows={false}
             showIndicators={false}
             showStatus={false}
+            showThumbs={false}
             emulateTouch={true}
+            stopOnHover={false}
+            selectedItem={0}
             centerSlidePercentage={100}
           >
             {testimonials.map(tes => (

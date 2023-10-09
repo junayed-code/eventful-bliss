@@ -1,15 +1,62 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { toast } from "react-toastify";
 import Button from "./Button";
 import Container from "./Container";
+import useAuth from "../hooks/useAuth";
+import ProfilePlaceholder from "../assets/images/profile.svg";
 
 export default function Navbar({ className = "" }) {
+  const navigate = useNavigate();
+  const { currentUser, logOut } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleMenuToggle() {
     setIsMenuOpen(open => !open);
   }
+
+  function handleLogOut() {
+    logOut().then(() => {
+      toast("You are logged out.");
+      navigate("/login");
+    });
+  }
+
+  const navLinks = (
+    <>
+      <li>
+        <NavLink className="hover:underline underline-offset-4" to="/">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className="hover:underline underline-offset-4" to="/about">
+          About
+        </NavLink>
+      </li>
+      {currentUser && (
+        <>
+          <li>
+            <NavLink
+              className="hover:underline underline-offset-4"
+              to="/events"
+            >
+              Events
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className="hover:underline underline-offset-4"
+              to="/services"
+            >
+              Services
+            </NavLink>
+          </li>
+        </>
+      )}
+    </>
+  );
 
   return (
     <nav
@@ -18,50 +65,46 @@ export default function Navbar({ className = "" }) {
         .trim()}
     >
       <Container className="navbar">
+        {/* Navbar Start Section */}
+
         <div className="navbar-start w-3/4 lg:w-1/2">
           <Link to="/" className="text-2xl font-bold">
             Eventful Bliss
           </Link>
         </div>
+
+        {/* Navbar Middle Section */}
+
         <div className="navbar-center hidden lg:inline-flex">
-          <ul className="flex items-center space-x-8 text-lg">
-            <li>
-              <NavLink className="hover:underline underline-offset-4" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="hover:underline underline-offset-4"
-                to="/about"
-              >
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="hover:underline underline-offset-4"
-                to="/event"
-              >
-                Event
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="hover:underline underline-offset-4"
-                to="/blog"
-              >
-                Blog
-              </NavLink>
-            </li>
-          </ul>
+          <ul className="flex items-center space-x-8 text-lg">{navLinks}</ul>
         </div>
+
+        {/* Navbar End Section */}
         <div className="navbar-end gap-2 w-3/12 lg:w-1/2">
-          <div className="hidden lg:flex items-center space-x-2">
-            <Button className="btn-neutral text-lg">Sign In</Button>
-            <Button className="btn-neutral btn-outline text-lg">
-              Register
-            </Button>
+          <div>
+            {currentUser ? (
+              <UserProfile
+                name={currentUser.displayName}
+                image={currentUser.photoURL}
+                email={currentUser.email}
+                onLogOut={handleLogOut}
+              />
+            ) : (
+              <div className="hidden lg:flex items-center space-x-2">
+                <Link
+                  to="/login"
+                  className="btn normal-case rounded-md btn-neutral text-lg"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="btn normal-case rounded-md btn-neutral btn-outline text-lg"
+                >
+                  Register
+                </Link>
+              </div>
+            )}
           </div>
 
           <label
@@ -92,49 +135,51 @@ export default function Navbar({ className = "" }) {
                   <IoMdClose className="text-3xl cursor-pointer" />
                 </span>
               </label>
-              <ul className="menu text-lg">
-                <li>
-                  <NavLink
-                    className="hover:underline underline-offset-4"
-                    to="/"
-                  >
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="hover:underline underline-offset-4"
-                    to="/about"
-                  >
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="hover:underline underline-offset-4"
-                    to="/event"
-                  >
-                    Event
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="hover:underline underline-offset-4"
-                    to="/blog"
-                  >
-                    Blog
-                  </NavLink>
-                </li>
-              </ul>
+              <ul className="menu text-lg">{navLinks}</ul>
 
               <div className="flex flex-col gap-2 mt-5">
-                <Button className="btn-info text-lg">Sign In</Button>
-                <Button className="btn-outline text-lg">Register</Button>
+                <Link
+                  to="/login"
+                  className="btn normal-case rounded-md btn-info text-lg"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="btn normal-case rounded-md btn-neutral btn-outline text-lg"
+                >
+                  Register
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </Container>
     </nav>
+  );
+}
+
+function UserProfile({ image, name, email, onLogOut }) {
+  return (
+    <div className="dropdown dropdown-end">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src={image || ProfilePlaceholder} alt={name} />
+        </div>
+      </label>
+
+      <div className="mt-3 z-[1] p-2 px-4 shadow dropdown-content bg-base-100 rounded-md w-52">
+        <div className="text-sm">
+          <h5 className="font-semibold">{name}</h5>
+          <p className="">{email}</p>
+        </div>
+        <hr className="my-2 border-gray-300" />
+        <ul tabIndex={0} className="menu menu-sm p-0">
+          <Button onClick={onLogOut} className="btn-ghost">
+            Logout
+          </Button>
+        </ul>
+      </div>
+    </div>
   );
 }

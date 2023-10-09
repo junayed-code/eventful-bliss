@@ -7,9 +7,13 @@ export default function Card({ className = "", children }) {
 }
 
 // Card image component
-Card.Image = ({ className, src, alt }) => (
+Card.Image = ({ className, src, alt, children }) => (
   <figure className={className}>
-    <img className="w-full aspect-video object-cover" src={src} alt={alt} />
+    {children ? (
+      children
+    ) : (
+      <img className="w-full aspect-video object-cover" src={src} alt={alt} />
+    )}
   </figure>
 );
 

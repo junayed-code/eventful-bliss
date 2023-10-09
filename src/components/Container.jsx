@@ -8,3 +8,7 @@ export default function Container({ className = "", children }) {
     </div>
   );
 }
+
+Container.Main = ({ className, children }) => {
+  return <main className={className}>{children}</main>;
+};

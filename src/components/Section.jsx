@@ -1,11 +1,11 @@
-export default function Section({ className, children }) {
+export default function Section({ className, children, ...rest }) {
   return <section className={className}>{children}</section>;
 }
 
 // Section title component
 Section.Title = ({ className = "", children }) => (
   <h2
-    className={"text-4xl font-bold mb-5 max-w-xl mx-auto text-center "
+    className={"text-4xl font-bold mb-5 max-w-2xl mx-auto text-center "
       .concat(className)
       .trim()}
   >
@@ -16,7 +16,7 @@ Section.Title = ({ className = "", children }) => (
 // Section description component
 Section.Description = ({ className = "", children }) => (
   <p
-    className={"text-base-content/75 max-w-xl mx-auto text-center "
+    className={"text-base-content/75 max-w-2xl mx-auto text-lg text-center "
       .concat(className)
       .trim()}
   >
